@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <script src="js/jquery-1.12.3.min.js" ></script>
+    <script src="js/survey.js" ></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <link href="js/jquery-ui.min.css" rel="stylesheet"/>
+    <title>Title</title>
+</head>
+<body>
+<div align="center">
+    <input type="hidden" id="emailToSendPDF" th:value="${email}"/>
+    <span id="validationEmail" style="display: none">You not enter Email, pls come back
+    <a href="/">Email</a> and enter your email</span>
+    <table border="1" width="50%">
+        <form method="post" id="FormID" >
+
+        <tr>
+            <td>
+                <span id="questionOne">1. First question?</span>
+            </td>
+            <td>
+                <input type="radio" id="questionOneYes" name="fistQuestion" value="Yes"/>Yes
+                <br/>
+                <input type="radio" id="questionOneNo" name="fistQuestion" value="NO"/>No
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span id="questionTwo">2. Question TWO?</span>
+            </td>
+            <td>
+                <input type="radio" id="questionTwoYes" name="questionTwo" value="Yes"/>Yes
+                <br/>
+                <input type="radio" id="questionTwoNo" name="questionTwo" value="NO"/>No
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span id="questionThree">3. Question THREE?</span>
+            </td>
+            <td>
+                <input type="radio" id="questionThreeYes" name="questionThree" value="Yes"/>Yes
+                <br/>
+                <input type="radio" id="questionThreeNo" name="questionThree" value="NO"/>No
+            </td>
+        </tr>
+             <tr>
+            <td>
+                <span id="questionFour">4. Question FOUR?</span>
+            </td>
+            <td>
+                <input type="radio" id="questionFourYes" name="questionFour" value="Yes"/>Yes
+                <br/>
+                <input type="radio" id="questionFourNo" name="questionFour" value="NO"/>No
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span id="questionFive">5. Question FIVE?</span>
+            </td>
+            <td>
+                <input type="radio" id="questionFiveYes" name="questionFive" value="Yes"/>Yes
+                <br/>
+                <input type="radio" id="questionFiveNo" name="questionFive" value="NO"/>No
+            </td>
+        </tr>
+             <!--<tr>-->
+            <!--<td>-->
+                <!--<span id="questionSix">6. Question SIX?</span>-->
+            <!--</td>-->
+            <!--<td>-->
+                <!--<input type="radio" id="questionSixYes" name="questionSix" value="Yes"/>Yes-->
+                <!--<br/>-->
+                <!--<input type="radio" id="questionSixNo" name="questionSix" value="NO"/>No-->
+            <!--</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+            <!--<td>-->
+                <!--<span id="questionSeven">7. Question SEVEN?</span>-->
+            <!--</td>-->
+            <!--<td>-->
+                <!--<input type="radio" id="questionSevenYes" name="questionSeven" value="Yes"/>Yes-->
+                <!--<br/>-->
+                <!--<input type="radio" id="questionSevenNo" name="questionSeven" value="NO"/>No-->
+            <!--</td>-->
+        <!--</tr>-->
+
+       <!--<tr>-->
+            <!--<td>-->
+                <!--<span id="questionEight">8. Question EIGHT?</span>-->
+            <!--</td>-->
+            <!--<td>-->
+                <!--<input type="radio" id="questionEightYes" name="questionEight" value="Yes"/>Yes-->
+                <!--<br/>-->
+                <!--<input type="radio" id="questionEightNo" name="questionEight" value="NO"/>No-->
+            <!--</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+            <!--<td>-->
+                <!--<span id="questionNine">9. Question NINE?</span>-->
+            <!--</td>-->
+            <!--<td>-->
+                <!--<input type="radio" id="questionNineYes" name="questionNine" value="Yes"/>Yes-->
+                <!--<br/>-->
+                <!--<input type="radio" id="questionNineNo" name="questionNine" value="NO"/>No-->
+            <!--</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+            <!--<td>-->
+                <!--<span id="questionTen">10. Question TEN?</span>-->
+            <!--</td>-->
+            <!--<td>-->
+                <!--<input type="radio" id="questionTenYes" name="questionTen" value="Yes"/>Yes-->
+                <!--<br/>-->
+                <!--<input type="radio" id="questionTenNo" name="questionTen" value="NO"/>No-->
+            <!--</td>-->
+        <!--</tr>-->
+             <!--<tr>-->
+            <!--<td>-->
+                <!--<span id="questionEleven">11. Question ELEVEN?</span>-->
+            <!--</td>-->
+            <!--<td>-->
+                <!--<input type="radio" id="questionElevenYes" name="questionEleven" value="Yes"/>Yes-->
+                <!--<br/>-->
+                <!--<input type="radio" id="questionElevenNo" name="questionEleven" value="NO"/>No-->
+            <!--</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+            <!--<td>-->
+                <!--<span id="questionTwelve">12. Question TWELVE?</span>-->
+            <!--</td>-->
+            <!--<td>-->
+                <!--<input type="radio" id="questionTwelveYes" name="questionTwelve" value="Yes"/>Yes-->
+                <!--<br/>-->
+                <!--<input type="radio" id="questionTwelveNo" name="questionTwelve" value="NO"/>No-->
+            <!--</td>-->
+        <!--</tr>-->
+             <!--<tr>-->
+            <!--<td>-->
+                <!--<span id="questionThirteen">13. Question THIRTEEN?</span>-->
+            <!--</td>-->
+            <!--<td>-->
+                <!--<input type="radio" id="questionThirteenYes" name="questionThirteen" value="Yes"/>Yes-->
+                <!--<br/>-->
+                <!--<input type="radio" id="questionThirteenNo" name="questionThirteen" value="NO"/>No-->
+            <!--</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+            <!--<td>-->
+                <!--<span id="questionFourteen">14. Question FOURTEEN?</span>-->
+            <!--</td>-->
+            <!--<td>-->
+                <!--<input type="radio" id="questionFourteenYes" name="questionFourteen" value="Yes"/>Yes-->
+                <!--<br/>-->
+                <!--<input type="radio" id="questionFourteenNo" name="questionFourteen" value="NO"/>No-->
+            <!--</td>-->
+        <!--</tr>-->
+         <!--<tr>-->
+            <!--<td>-->
+                <!--<span id="questionFifteen">15. Question FIFTEEN?</span>-->
+            <!--</td>-->
+            <!--<td>-->
+                <!--<input type="radio" id="questionFifteenYes" name="questionFifteen" value="Yes"/>Yes-->
+                <!--<br/>-->
+                <!--<input type="radio" id="questionFifteenNo" name="questionFifteen" value="NO"/>No-->
+            <!--</td>-->
+        <!--</tr>-->
+
+
+
+
+
+
+
+        <tr><td><input type="button" value="Next" onclick="RadioValidator()"/></td></tr>
+
+    </form>
+    </table>
+
+</div>
+</body>
+</html>
